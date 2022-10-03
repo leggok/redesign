@@ -1,0 +1,29 @@
+.breadcrumbs ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs ul li {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  margin-right: 27px;
+  position: relative;
+}
+.breadcrumbs ul li a {
+  color: #6d7381;
+}
+.breadcrumbs ul li::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -13px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='9' viewBox='0 0 7 9' fill='none'%3E%3Cpath d='M1 8L4.88889 4.5L1 1' stroke='%232B60FA' stroke-width='2'/%3E%3C/svg%3E");
+  width: 7px;
+  height: 9px;
+}
+.breadcrumbs ul li:last-child::after {
+  content: none;
+}

@@ -1,0 +1,24 @@
+.main_banner {
+  padding-top: 45px;
+  padding-bottom: 100px;
+}
+.main_banner h2 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.main_banner h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 55px;
+  color: #fff;
+  margin-bottom: 23px;
+}
+.main_banner .flex_wrap {
+  display: flex;
+  justify-content: space-between;
+}

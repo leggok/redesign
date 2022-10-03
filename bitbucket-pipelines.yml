@@ -1,0 +1,10 @@
+image: node:16
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy
+          image: kroniak/ssh-client
+          script:
+            - ssh $USER@$SERVER_IP "cd $PROJECT_PATH; rm -rf $PROJECT_PATH$BUILD_PATH/*; git reset --hard HEAD; git clean -f -d; git pull; git-lfs pull; nvm use 14; npm install; npm run build"

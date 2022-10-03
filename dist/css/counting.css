@@ -1,0 +1,39 @@
+.counting {
+  background: linear-gradient(180deg, #F4F6FB 0.55%, #F4F4FB 100%);
+  box-shadow: 0px 1px 20px rgba(211, 211, 211, 0.2);
+  backdrop-filter: blur(42px);
+  padding: 40px 0;
+}
+.counting .container {
+  display: flex;
+  justify-content: space-between;
+}
+.counting_item {
+  max-width: 190px;
+}
+.counting_item_num {
+  font-weight: 400;
+  display: block;
+  font-size: 42px;
+  line-height: 48px;
+  color: #2b60fa;
+  letter-spacing: -0.5px;
+}
+.counting_item_num span {
+  font-size: 32px;
+  line-height: 36px;
+  color: #2b60fa;
+  font-weight: 400;
+}
+.counting_item_text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #525252;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 950px) {
+  .counting {
+    display: none;
+  }
+}

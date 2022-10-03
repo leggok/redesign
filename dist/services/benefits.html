@@ -1,0 +1,122 @@
+<style>
+    .benefits {
+  padding: 50px 0;
+}
+.benefits h2 {
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.5px;
+  color: #1B1B1D;
+  margin-bottom: 42px;
+}
+.benefits ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.benefits ul li {
+  width: 31%;
+  margin: 1%;
+  padding: 15px 20px;
+  min-width: 250px;
+  transition: all 0.2s ease;
+}
+.benefits ul li h3 {
+  font-size: 20px;
+  line-height: 23px;
+  color: #1b1b1d;
+  margin-bottom: 25px;
+  position: relative;
+}
+.benefits ul li h3::after {
+  position: absolute;
+  transition: all 0.2s ease;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  height: 1px;
+  width: 90px;
+  background-color: #c7c6c6;
+}
+.benefits ul li p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #525252;
+}
+.benefits ul li:hover {
+  transition: all 0.2s ease;
+  background-color: #fff;
+  box-shadow: 6px 6px 20px rgba(174, 174, 192, 0.3);
+}
+.benefits ul li:hover h3::after {
+  background-color: #2b61fa;
+}
+
+@media screen and (max-width: 950px) {
+  .benefits ul li {
+    min-width: initial;
+    width: 48%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .benefits ul li {
+    display: none;
+    width: 100%;
+    box-shadow: 6px 6px 20px rgba(174, 174, 192, 0.3);
+    height: initial;
+  }
+  .benefits ul li:first-child {
+    display: block;
+  }
+  .benefits ul li h3 {
+    text-align: center;
+  }
+  .benefits ul li h3::after {
+    left: calc(50% - 45px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .benefits {
+    padding: 25px 0;
+  }
+  .benefits h2 {
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 12px;
+  }
+}
+</style>
+<section class="benefits">
+    <div class="container">
+        <h2>What qualities of Atlasiko Inc. <span class="title-highlight">IT consulting</span> firm will benefit you</h2>
+        <ul>
+            <li>
+                <h3>We are an experienced IT consulting</h3>
+                <p>Since 2015 Atlasiko Inc. has been providing consulting services for different companies in various industries. That includes not only enterprise IT consultancy but small businesses too.</p>
+            </li>
+            <li>
+                <h3>We solve any issues</h3>
+                <p>When some other IT consulting companies often are focused on specific solutions, it doesn’t matter to us what problems with information technology administration appeared. Our IT support consultants will help you to find the best way out.</p>
+            </li>
+            <li>
+                <h3>We provide an expert assessment</h3>
+                <p>With Atlasiko technology services and consulting, it’s easy to estimate all prospects of future business development, possible risks, and security efforts in IT structure.</p>
+            </li>
+            <li>
+                <h3>We ensure finding the best solution</h3>
+                <p>Don’t be afraid to get lost in a big variety of modern technologies with our IT consulting for business. Atlasiko information services consultants will present you with the most efficient solutions for your particular request.</p>
+            </li>
+            <li>
+                <h3>We enable thorough diagnostics</h3>
+                <p>Assess the level of automation and modernization process within your company with our IT consulting service. It’ll allow you o monitor the progress and improve management systems.</p>
+            </li>
+            <li>
+                <h3>We create customized solutions</h3>
+                <p>If there is no suitable solution to meet your business objectives fully, Atlasiko Inc. information technology consulting services give you an opportunity to get a tailored one. Contact us for more information or to request IT consulting services</p>
+            </li>
+        </ul>
+    </div>
+</section>

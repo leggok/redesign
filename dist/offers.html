@@ -1,0 +1,459 @@
+<style>
+  .atlasiko_offers {
+  padding: 50px 0;
+}
+.atlasiko_offers_grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.atlasiko_offers_grid .grid_item {
+  width: 30%;
+  margin: 1%;
+  min-width: 360px;
+  max-height: 190px;
+  background-color: #F4F5FB;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  height: 100%;
+  min-height: 170px;
+}
+.atlasiko_offers_grid .grid_item .absolute_wrap {
+  position: absolute;
+  padding: 15px 20px;
+  max-height: 220px;
+  min-height: 170px;
+  height: 100%;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.atlasiko_offers_grid .grid_item .absolute_wrap p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.atlasiko_offers_grid .grid_item .absolute_wrap::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+.atlasiko_offers_grid .grid_item .absolute_wrap::-webkit-scrollbar {
+  width: 4px;
+  background-color: #F5F5F5;
+}
+.atlasiko_offers_grid .grid_item .absolute_wrap::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: #2b60fa;
+}
+.atlasiko_offers_grid .grid_item .absolute_wrap.tobottom {
+  top: 0;
+}
+.atlasiko_offers_grid .grid_item .absolute_wrap.totop {
+  bottom: 0;
+}
+.atlasiko_offers_grid .grid_item .absolute_wrap .arrow_wrap {
+  position: relative;
+}
+.atlasiko_offers_grid .grid_item .absolute_wrap .arrow_wrap .arrow {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+.atlasiko_offers_grid .grid_item ul {
+  transition: all 0.2s ease;
+}
+.atlasiko_offers_grid .grid_item ul li {
+  font-size: 16px;
+  line-height: 25px;
+}
+.atlasiko_offers_grid .grid_item.active {
+  max-height: 400px;
+  background-color: #E6E8EC;
+  max-height: 380px;
+}
+.atlasiko_offers_grid .grid_item.active h3 {
+  color: #2b60fa;
+}
+.atlasiko_offers_grid .grid_item.active .grid_item_text > div {
+  display: none;
+}
+.atlasiko_offers_grid .grid_item.active .absolute_wrap {
+  background-color: #E6E8EC;
+  position: absolute;
+  max-height: 400px;
+  top: 0;
+  overflow: auto;
+  display: block;
+  height: calc(200% + 25px);
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  z-index: 1;
+}
+.atlasiko_offers_grid .grid_item.active .absolute_wrap p {
+  display: block;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: initial;
+  overflow: initial;
+  text-overflow: initial;
+}
+.atlasiko_offers_grid .grid_item.active .absolute_wrap .arrow_wrap .arrow {
+  top: -15px;
+  transform: rotate(180deg);
+}
+.atlasiko_offers_grid .grid_item.active .absolute_wrap ul {
+  transition: all 0.2s ease;
+  margin-top: 15px;
+  opacity: 1;
+  max-height: 300px;
+}
+.atlasiko_offers_grid .grid_item.active .absolute_wrap ul li {
+  position: relative;
+  padding-left: 12px;
+  font-weight: 400;
+  opacity: 1;
+  color: #525252;
+}
+.atlasiko_offers_grid .grid_item.active .absolute_wrap ul li:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #2b60fa;
+}
+.atlasiko_offers_grid .grid_item .one_more_wrapper {
+  position: relative;
+}
+.atlasiko_offers_grid .grid_item.active-totop {
+  max-height: 400px;
+  background-color: #E6E8EC;
+  max-height: 380px;
+}
+.atlasiko_offers_grid .grid_item.active-totop h3 {
+  color: #2b60fa;
+}
+.atlasiko_offers_grid .grid_item.active-totop .grid_item_text > div {
+  display: none;
+}
+.atlasiko_offers_grid .grid_item.active-totop .absolute_wrap {
+  background-color: #E6E8EC;
+  bottom: 0;
+  max-height: 400px;
+  overflow: auto;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: calc(200% + 25px);
+  padding: 15px 20px;
+  z-index: 1;
+}
+.atlasiko_offers_grid .grid_item.active-totop .absolute_wrap p {
+  display: block;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: initial;
+  overflow: initial;
+  text-overflow: initial;
+}
+.atlasiko_offers_grid .grid_item.active-totop .absolute_wrap .arrow_wrap .arrow {
+  top: -15px;
+  transform: rotate(180deg);
+}
+.atlasiko_offers_grid .grid_item.active-totop .absolute_wrap ul {
+  transition: all 0.2s ease;
+  margin-top: 15px;
+  opacity: 1;
+  max-height: 300px;
+}
+.atlasiko_offers_grid .grid_item.active-totop .absolute_wrap ul li {
+  position: relative;
+  padding-left: 12px;
+  font-weight: 400;
+  opacity: 1;
+  color: #525252;
+}
+.atlasiko_offers_grid .grid_item.active-totop .absolute_wrap ul li:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #2b60fa;
+}
+.atlasiko_offers_grid .grid_item h3 {
+  color: #1b1b1d;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.atlasiko_offers_grid .grid_item p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #525252;
+}
+.atlasiko_offers_grid .grid_item ul {
+  opacity: 0;
+  transition: all 0.2s ease;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+.atlasiko_offers h2 {
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.5px;
+  color: #1b1b1d;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .atlasiko_offers_grid .grid_item {
+    width: 31%;
+    min-width: initial;
+  }
+}
+@media screen and (max-width: 950px) {
+  .atlasiko_offers_grid .grid_item {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .atlasiko_offers_grid .grid_item {
+    width: 100%;
+    min-height: 144px;
+    min-width: 300px;
+  }
+  .atlasiko_offers_grid .grid_item .absolute_wrap {
+    min-height: 144px;
+  }
+  .atlasiko_offers_grid .grid_item .absolute_wrap .totop {
+    top: 0;
+    bottom: initial;
+  }
+  .atlasiko_offers_grid .grid_item .absolute_wrap {
+    position: static;
+  }
+  .atlasiko_offers_grid .grid_item.active .absolute_wrap, .atlasiko_offers_grid .grid_item.active-totop .absolute_wrap {
+    position: static;
+  }
+  .atlasiko_offers_grid .grid_item.active .totop, .atlasiko_offers_grid .grid_item.active-totop .totop {
+    top: 0;
+    bottom: initial;
+  }
+}
+@media screen and (max-width: 500px) {
+  .atlasiko_offers {
+    padding: 25px 0;
+  }
+  .atlasiko_offers h2 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+  .atlasiko_offers_grid .grid_item {
+    min-width: initial;
+  }
+  .atlasiko_offers_grid .grid_item h3 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .atlasiko_offers_grid .grid_item p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .atlasiko_offers_grid .grid_item .absolute_wrap ul li {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+</style>
+<section class="atlasiko_offers">
+  <div class="container">
+      <h2>What <span class="title-highlight">IT consulting</span> services Atlasiko offers</h2>
+      <div class="atlasiko_offers_grid grid">
+          <div class="grid_item">
+              <div class="absolute_wrap">
+                  <h3>Digital Transformation Consulting</h3>
+                  <div class="grid_item_text">
+                      <p>Increase the efficiency of your business by incorporating innovations into management systems with the help of our IT consulting services.</p>
+                      
+                      <ul>
+                          <li>Thorough IT infrastructure analysis included in our IT consulting solutions allows gauging the efficiency of different parts of IT infrastructure.</li>
+                          <li>Our IT consulting services company assesses cloud services and IT procedures.</li>
+                          <li>We help to find breaches and weaknesses in the IT infrastructure that cause unnecessary expenses.</li>
+                      </ul>
+                  </div>
+                  <div class="arrow_wrap">
+                      <div class="arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 8.33333L8.5 14.8148L16 8.33333M8.5 15L8.5 0" stroke="#2B61FA" stroke-width="2"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="grid_item">
+              <div class="absolute_wrap">
+                  <h3>IT Strategy and Planning Consulting</h3>
+                  <div class="grid_item_text">
+                      <p>Build the perfect strategy to use the full potential of your IT assets for the development of your business.</p>
+                      
+                      <ul>
+                          <li>Thorough IT infrastructure analysis included in our IT consulting solutions allows gauging the efficiency of different parts of IT infrastructure.</li>
+                          <li>Our IT consulting services company assesses cloud services and IT procedures.</li>
+                          <li>We help to find breaches and weaknesses in the IT infrastructure that cause unnecessary expenses.</li>
+                      </ul>
+                  </div>
+                  <div class="arrow_wrap">
+                      <div class="arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 8.33333L8.5 14.8148L16 8.33333M8.5 15L8.5 0" stroke="#2B61FA" stroke-width="2"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="grid_item">
+              <div class="absolute_wrap">
+                  <h3>IT Infrastructure Assessment</h3>
+                  <div class="grid_item_text">
+                      <p>Estimate opportunities to enhance the productivity of your IT infrastructure and reduce its cost with our IT business consulting services.</p>
+                      
+                      <ul>
+                          <li>Thorough IT infrastructure analysis included in our IT consulting solutions allows gauging the efficiency of different parts of IT infrastructure.</li>
+                          <li>Our IT consulting services company assesses cloud services and IT procedures.</li>
+                          <li>We help to find breaches and weaknesses in the IT infrastructure that cause unnecessary expenses.</li>
+                      </ul>
+                  </div>
+                  <div class="arrow_wrap">
+                      <div class="arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 8.33333L8.5 14.8148L16 8.33333M8.5 15L8.5 0" stroke="#2B61FA" stroke-width="2"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="grid_item">
+              <div class="absolute_wrap">
+                  <h3>IT Infrastructure Management</h3>
+                  <div class="grid_item_text">
+                      <p>Make sure that your IT infrastructure is stable and flexible to accommodate all changes in your business trade promptly.</p>
+                      
+                      <ul>
+                          <li>Thorough IT infrastructure analysis included in our IT consulting solutions allows gauging the efficiency of different parts of IT infrastructure.</li>
+                          <li>Our IT consulting services company assesses cloud services and IT procedures.</li>
+                          <li>We help to find breaches and weaknesses in the IT infrastructure that cause unnecessary expenses.</li>
+                      </ul>
+                  </div>
+                  <div class="arrow_wrap">
+                      <div class="arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 8.33333L8.5 14.8148L16 8.33333M8.5 15L8.5 0" stroke="#2B61FA" stroke-width="2"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="grid_item">
+              <div class="absolute_wrap">
+                  <h3>IT Project Management</h3>
+                  <div class="grid_item_text">
+                      <p>Get our IT consultancy services to organize all activities within your IT projects and ensure successful implementation.</p>
+                      
+                      <ul>
+                          <li>Thorough IT infrastructure analysis included in our IT consulting solutions allows gauging the efficiency of different parts of IT infrastructure.</li>
+                          <li>Our IT consulting services company assesses cloud services and IT procedures.</li>
+                          <li>We help to find breaches and weaknesses in the IT infrastructure that cause unnecessary expenses.</li>
+                      </ul>
+                  </div>
+                  <div class="arrow_wrap">
+                      <div class="arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 8.33333L8.5 14.8148L16 8.33333M8.5 15L8.5 0" stroke="#2B61FA" stroke-width="2"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="grid_item">
+              <div class="absolute_wrap tobottom">
+                  <h3>IT Infrastructure Assessment</h3>
+                  <div class="grid_item_text">
+                      <p>Estimate opportunities to enhance the productivity of your IT infrastructure and reduce its cost with our IT business consulting services.</p>
+                      
+                      <ul>
+                          <li>Thorough IT infrastructure analysis included in our IT consulting solutions allows gauging the efficiency of different parts of IT infrastructure.</li>
+                          <li>Our IT consulting services company assesses cloud services and IT procedures.</li>
+                          <li>We help to find breaches and weaknesses in the IT infrastructure that cause unnecessary expenses.</li>
+                      </ul>
+                  </div>
+                  <div class="arrow_wrap">
+                      <div class="arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 8.33333L8.5 14.8148L16 8.33333M8.5 15L8.5 0" stroke="#2B61FA" stroke-width="2"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="grid_item">
+              <div class="absolute_wrap">
+                  <h3>Security Risk Assessment</h3>
+                  <div class="grid_item_text">
+                      <p>Get your data security checked by specialists of our information technology consulting firm.</p>
+                      
+                      <ul>
+                          <li>Thorough IT infrastructure analysis included in our IT consulting solutions allows gauging the efficiency of different parts of IT infrastructure.</li>
+                          <li>Our IT consulting services company assesses cloud services and IT procedures.</li>
+                          <li>We help to find breaches and weaknesses in the IT infrastructure that cause unnecessary expenses.</li>
+                      </ul>
+                  </div>
+                  <div class="arrow_wrap">
+                      <div class="arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 8.33333L8.5 14.8148L16 8.33333M8.5 15L8.5 0" stroke="#2B61FA" stroke-width="2"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="grid_item">
+              <div class="absolute_wrap">
+                  <h3>Technology Consulting</h3>
+                  <div class="grid_item_text">
+                      <p>Incorporate disruptive innovations to transform your IT infrastructure getting IT consultant services by Atlasiko Inc.</p>
+                      
+                      <ul>
+                          <li>Thorough IT infrastructure analysis included in our IT consulting solutions allows gauging the efficiency of different parts of IT infrastructure.</li>
+                          <li>Our IT consulting services company assesses cloud services and IT procedures.</li>
+                          <li>We help to find breaches and weaknesses in the IT infrastructure that cause unnecessary expenses.</li>
+                      </ul>
+                  </div>
+                  <div class="arrow_wrap">
+                      <div class="arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 8.33333L8.5 14.8148L16 8.33333M8.5 15L8.5 0" stroke="#2B61FA" stroke-width="2"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="grid_item">
+              <div class="absolute_wrap totop">
+                  <h3>Application Support</h3>
+                  <div class="grid_item_text">
+                      <p>Maintain the proper functionality of the software and apps your business uses thanks to our IT consultancy solutions.</p>
+                      
+                      <ul>
+                          <li>Thorough IT infrastructure analysis included in our IT consulting solutions allows gauging the efficiency of different parts of IT infrastructure.</li>
+                          <li>Our IT consulting services company assesses cloud services and IT procedures.</li>
+                          <li>We help to find breaches and weaknesses in the IT infrastructure that cause unnecessary expenses.</li>
+                      </ul>
+                  </div>
+                  <div class="arrow_wrap">
+                      <div class="arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 8.33333L8.5 14.8148L16 8.33333M8.5 15L8.5 0" stroke="#2B61FA" stroke-width="2"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

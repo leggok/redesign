@@ -1,0 +1,72 @@
+.steps {
+  padding: 45px 0;
+  background-color: #F3F3F3;
+}
+.steps h2 {
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.5px;
+  color: #1b1b1d;
+  margin-bottom: 32px;
+}
+.steps ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.steps ul li {
+  width: calc(50% - 10px);
+  margin-bottom: 46px;
+  transition: all 0.2s ease;
+}
+.steps ul li .num_step {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: -0.5px;
+  color: #1b1b1d;
+  border-bottom: 2px solid #c7c6c6;
+  padding-bottom: 5px;
+  margin-bottom: 14px;
+}
+.steps ul li h3 {
+  font-size: 20px;
+  line-height: 23px;
+  color: #1b1b1d;
+  margin-bottom: 16px;
+}
+.steps ul li p {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.5px;
+  color: #525252;
+}
+.steps ul li:hover .num_step {
+  color: #2B60FA;
+  border-color: #2B60FA;
+}
+.steps ul li:hover h3 {
+  color: #2B60FA;
+}
+
+@media screen and (max-width: 600px) {
+  .steps {
+    padding: 28px 0;
+  }
+  .steps h2 {
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+  .steps ul li {
+    width: 100%;
+    display: none;
+    margin-bottom: 0;
+  }
+  .steps ul li:first-child {
+    display: block;
+  }
+}

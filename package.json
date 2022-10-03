@@ -1,0 +1,30 @@
+{
+  "name": "test_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.53.0"
+  },
+  "description": "",
+  "dependencies": {
+    "@google/model-viewer": "^2.0.0-rc1",
+    "swiper": "^8.2.4"
+  },
+  "engines": {
+    "node": "14.15.4"
+  }
+}

@@ -1,0 +1,102 @@
+.contact{
+    background-color: #232325;
+    padding: 50px 0;
+    &_left{
+        max-width: 530px;
+        width: 50%;
+    }
+    &_right{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 330px;
+            button{
+                margin-top: 25px;
+                border: none;
+                border: 1px solid transparent;
+                background-color: #2b61fa;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 21px;
+                padding: 12px 56px;
+                transition: all .2s ease;
+                cursor: pointer;
+                &:hover{
+                    color: #2b61fa;
+                    background-color: #fff;
+                    border-color: #2b61fa;
+                }
+            }
+            input{
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #fff;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 32px;
+                color: #fff;
+                background-color: transparent;
+                margin-bottom: 15px;
+                display: inline-block;
+                &::placeholder{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 32px;
+                    color: #c7c6c6;
+                }
+            }
+        }
+    }
+    .container{
+        display: flex;
+    }
+    h2{
+        font-size: 36px;
+        line-height: 41px;
+        letter-spacing: -0.5px;
+        margin-bottom: 36px;
+        color: #fff;
+    }
+    .subtitle{
+        font-size: 16px;
+        line-height: 25px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .contact .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact{
+        &_left, &_right{
+            width: 100%;      
+            max-width: initial; 
+            form{
+                margin-top: 20px;
+                width: 80%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .contact {
+        padding: 18px 0;
+        h2{
+            font-size: 24px;
+            line-height: 27px;
+            margin-bottom: 8px;
+        }
+        .subtitle{
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 13px;
+        }
+    }
+}

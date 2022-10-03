@@ -1,0 +1,302 @@
+<style>
+    .pages {
+  padding: 45px 0;
+  background-color: #F4F5FB;
+}
+.pages h2 {
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+}
+.pages .container > ul > li {
+  width: 31%;
+  margin: 1%;
+  min-width: 270px;
+}
+.pages ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.pages ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 420px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+.pages ul li .page_image {
+  width: 100%;
+  max-height: 220px;
+  position: relative;
+}
+.pages ul li .page_image .tags {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 1;
+}
+.pages ul li .page_image .tags li {
+  margin-right: 10px;
+  background: linear-gradient(135.77deg, #2B61FA -94.16%, #2B61FA 100%), linear-gradient(135.77deg, #2B61FA -94.16%, #2B61FA 100%);
+}
+.pages ul li .page_image .tags li a {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(135.77deg, #FFFFFF -94.16%, rgba(255, 255, 255, 0.51) 100%);
+  font-size: 14px;
+  line-height: 16px;
+  padding: 1px;
+}
+.pages ul li .page_image .tags li a .gradient_wrap {
+  background-color: #2b60fa;
+  padding: 7px 15px;
+}
+.pages ul li .page_content {
+  margin-bottom: 42px;
+  padding: 20px 17px;
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+.pages ul li .page_footer {
+  padding: 20px 17px;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pages ul li .page_footer a {
+  color: #525252;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+}
+.pages ul li .page_footer a svg path {
+  stroke: #525252;
+}
+.pages ul li .page_footer a span:first-child {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #525252;
+  margin-right: 7px;
+  white-space: nowrap;
+}
+.pages ul li .page_footer div {
+  color: #525252;
+  display: flex;
+  align-items: center;
+}
+.pages ul li .page_footer div span {
+  white-space: nowrap;
+}
+.pages ul li .page_footer div svg {
+  margin-right: 7px;
+}
+.pages ul li .title {
+  font-size: 16px;
+  line-height: 18px;
+  display: inline-block;
+  color: #1b1b1d;
+  letter-spacing: -0.5px;
+  margin-bottom: 26px;
+  position: relative;
+}
+.pages ul li .title::after {
+  position: absolute;
+  content: "";
+  bottom: -13px;
+  left: 0;
+  width: 30px;
+  height: 1px;
+  background-color: #2b60fa;
+}
+.pages ul li .date_author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.pages ul li .date_author span {
+  font-size: 14px;
+  line-height: 16px;
+  color: #1b1b1d;
+}
+.pages ul li .date_author time {
+  margin-right: 10px;
+  position: relative;
+  color: #525252;
+  font-size: 16px;
+  line-height: 18px;
+}
+.pages ul li .date_author time::after {
+  position: absolute;
+  content: "/";
+  font-size: 14px;
+  line-height: 16px;
+  top: 2px;
+  right: -7px;
+  color: #2b60f9;
+}
+.pages ul li .page_content_text {
+  font-size: 14px;
+  line-height: 25px;
+  color: #525252;
+}
+.pages ul li:hover {
+  box-shadow: -4.08333px -4.08333px 13px rgba(255, 255, 255, 0.2), 6.125px 6.125px 12.25px rgba(174, 174, 192, 0.2);
+}
+.pages ul li:hover .title {
+  color: #2B60FA;
+}
+.pages ul li:hover .page_footer a {
+  color: #2B60FA;
+}
+.pages ul li:hover .page_footer a svg path {
+  stroke: #2B60FA;
+}
+
+@media screen and (max-width: 1160px) {
+  .pages ul li .page_footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .pages ul li .page_footer > * {
+    margin: 3px 0;
+  }
+}
+</style>
+<section class="pages">
+    <div class="container">
+        <h2>Featured Pages</h2>
+        <ul>
+            <li itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="page_image">
+                    <img src="images/our-benefits-for-your-company.jpg" alt="Our benefits for your company">
+                    <ul class="tags">
+                        <li>
+                            <a href="#">
+                                <div class="gradient_wrap" itemprop="articleSection">Tech</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="gradient_wrap" itemprop="articleSection">News</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page_content">
+                    <div class="title" itemprop="name">Our Benefits for your company</div>
+                    <div class="date_author">
+                        <time itemprop="datePublished" datetime="2022-10-25">25 Nov, 2022</time>
+                        <span itemprop="author">by Jack White </span>
+                    </div>
+                    <div class="page_content_text">
+                        <p itemprop="articleBody">When we talk about IT consulting, we usually refer to a set of services directed at assisting customers in the choice of proper information technologies</p>
+                    </div>
+                </div>
+                <div class="page_footer">
+                    <a href="#">
+                        <span>Read more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.33333 15.8936L14.8148 8.39355L8.33333 0.893554M15 8.39355L-3.27835e-07 8.39355" stroke="#2B60FA" stroke-width="2"/></svg>
+                    </a>
+                    <div class="views">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none"><g clip-path="url(#clip0_709_4513)"><path d="M16.5385 9.36474C16.4078 9.1449 13.2662 3.99609 8.29996 3.99609C4.03853 3.99609 0.241214 9.11533 0.0814369 9.33356C-0.0271456 9.48225 -0.0271456 9.70048 0.0814369 9.84995C0.241214 10.0682 4.03853 15.1874 8.29996 15.1874C12.5614 15.1874 16.3587 10.0682 16.5185 9.84995C16.6188 9.71247 16.6278 9.51342 16.5385 9.36474ZM8.29996 14.3881C4.88378 14.3881 1.63564 10.623 0.810487 9.59177C1.63427 8.55979 4.87895 4.7955 8.29996 4.7955C12.2972 4.7955 15.1185 8.55499 15.8074 9.57019C15.012 10.5686 11.7452 14.3881 8.29996 14.3881Z" fill="#2B60FA"/><path d="M8.29795 6.39478C6.77212 6.39478 5.53125 7.82886 5.53125 9.59229C5.53125 11.3557 6.77212 12.7898 8.29795 12.7898C9.82378 12.7898 11.0646 11.3557 11.0646 9.59229C11.0646 7.82886 9.82378 6.39478 8.29795 6.39478ZM8.29795 11.9905C7.15392 11.9905 6.22292 10.9145 6.22292 9.59232C6.22292 8.27016 7.15392 7.19418 8.29795 7.19418C9.44197 7.19418 10.373 8.27016 10.373 9.59232C10.373 10.9145 9.44197 11.9905 8.29795 11.9905Z" fill="#2B60FA"/></g><defs><clipPath id="clip0_709_4513"><rect width="16.6" height="19.1848" fill="white"/></clipPath></defs></svg>
+                        <span>12 views</span>                     
+                    </div>
+                    <div class="comments">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M2.67014 0H13.9542C15.1347 0 16.0938 1.10833 16.0938 2.47265V10.4532C16.0938 11.8147 15.1372 12.9202 13.9616 12.9258V16.5462L9.45862 12.9258H2.67014C1.48965 12.9258 0.530643 11.8175 0.530643 10.4532V2.47265C0.530643 1.10833 1.49208 0 2.67014 0ZM1.4434 10.4532C1.4434 11.2352 1.99349 11.871 2.67014 11.871H9.74583L13.0512 14.5293V11.871H13.9567C14.6333 11.871 15.1834 11.2352 15.1834 10.4532V2.47265C15.1834 1.69063 14.6333 1.05488 13.9567 1.05488H2.67258C1.99592 1.05488 1.44583 1.69063 1.44583 2.47265V10.4532H1.4434Z" fill="#2B60FA"/></svg>
+                        <span>12 comments</span>                     
+                    </div>
+                </div>
+            </li> 
+            <li itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="page_image">
+                    <img src="images/our-benefits-for-your-company.jpg" alt="Our benefits for your company">
+                    <ul class="tags">
+                        <li>
+                            <a href="#">
+                                <div class="gradient_wrap" itemprop="articleSection">Tech</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="gradient_wrap" itemprop="articleSection">News</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page_content">
+                    <div class="title" itemprop="name">Our Benefits for your company</div>
+                    <div class="date_author">
+                        <time itemprop="datePublished" datetime="2022-10-25">25 Nov, 2022</time>
+                        <span itemprop="author">by Jack White </span>
+                    </div>
+                    <div class="page_content_text">
+                        <p itemprop="articleBody">When we talk about IT consulting, we usually refer to a set of services directed at assisting customers in the choice of proper information technologies</p>
+                    </div>
+                </div>
+                <div class="page_footer">
+                    <a href="#">
+                        <span>Read more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.33333 15.8936L14.8148 8.39355L8.33333 0.893554M15 8.39355L-3.27835e-07 8.39355" stroke="#2B60FA" stroke-width="2"/></svg>
+                    </a>
+                    <div class="views">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none"><g clip-path="url(#clip0_709_4513)"><path d="M16.5385 9.36474C16.4078 9.1449 13.2662 3.99609 8.29996 3.99609C4.03853 3.99609 0.241214 9.11533 0.0814369 9.33356C-0.0271456 9.48225 -0.0271456 9.70048 0.0814369 9.84995C0.241214 10.0682 4.03853 15.1874 8.29996 15.1874C12.5614 15.1874 16.3587 10.0682 16.5185 9.84995C16.6188 9.71247 16.6278 9.51342 16.5385 9.36474ZM8.29996 14.3881C4.88378 14.3881 1.63564 10.623 0.810487 9.59177C1.63427 8.55979 4.87895 4.7955 8.29996 4.7955C12.2972 4.7955 15.1185 8.55499 15.8074 9.57019C15.012 10.5686 11.7452 14.3881 8.29996 14.3881Z" fill="#2B60FA"/><path d="M8.29795 6.39478C6.77212 6.39478 5.53125 7.82886 5.53125 9.59229C5.53125 11.3557 6.77212 12.7898 8.29795 12.7898C9.82378 12.7898 11.0646 11.3557 11.0646 9.59229C11.0646 7.82886 9.82378 6.39478 8.29795 6.39478ZM8.29795 11.9905C7.15392 11.9905 6.22292 10.9145 6.22292 9.59232C6.22292 8.27016 7.15392 7.19418 8.29795 7.19418C9.44197 7.19418 10.373 8.27016 10.373 9.59232C10.373 10.9145 9.44197 11.9905 8.29795 11.9905Z" fill="#2B60FA"/></g><defs><clipPath id="clip0_709_4513"><rect width="16.6" height="19.1848" fill="white"/></clipPath></defs></svg>
+                        <span>12 views</span>                     
+                    </div>
+                    <div class="comments">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M2.67014 0H13.9542C15.1347 0 16.0938 1.10833 16.0938 2.47265V10.4532C16.0938 11.8147 15.1372 12.9202 13.9616 12.9258V16.5462L9.45862 12.9258H2.67014C1.48965 12.9258 0.530643 11.8175 0.530643 10.4532V2.47265C0.530643 1.10833 1.49208 0 2.67014 0ZM1.4434 10.4532C1.4434 11.2352 1.99349 11.871 2.67014 11.871H9.74583L13.0512 14.5293V11.871H13.9567C14.6333 11.871 15.1834 11.2352 15.1834 10.4532V2.47265C15.1834 1.69063 14.6333 1.05488 13.9567 1.05488H2.67258C1.99592 1.05488 1.44583 1.69063 1.44583 2.47265V10.4532H1.4434Z" fill="#2B60FA"/></svg>
+                        <span>12 comments</span>                     
+                    </div>
+                </div>
+            </li>
+            <li itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="page_image">
+                    <img src="images/our-benefits-for-your-company.jpg" alt="Our benefits for your company">
+                    <ul class="tags">
+                        <li>
+                            <a href="#">
+                                <div class="gradient_wrap" itemprop="articleSection">Tech</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="gradient_wrap" itemprop="articleSection">News</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page_content">
+                    <div class="title" itemprop="name">Our Benefits for your company</div>
+                    <div class="date_author">
+                        <time itemprop="datePublished" datetime="2022-10-25">25 Nov, 2022</time>
+                        <span itemprop="author">by Jack White </span>
+                    </div>
+                    <div class="page_content_text">
+                        <p itemprop="articleBody">When we talk about IT consulting, we usually refer to a set of services directed at assisting customers in the choice of proper information technologies</p>
+                    </div>
+                </div>
+                <div class="page_footer">
+                    <a href="#">
+                        <span>Read more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.33333 15.8936L14.8148 8.39355L8.33333 0.893554M15 8.39355L-3.27835e-07 8.39355" stroke="#2B60FA" stroke-width="2"/></svg>
+                    </a>
+                    <div class="views">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none"><g clip-path="url(#clip0_709_4513)"><path d="M16.5385 9.36474C16.4078 9.1449 13.2662 3.99609 8.29996 3.99609C4.03853 3.99609 0.241214 9.11533 0.0814369 9.33356C-0.0271456 9.48225 -0.0271456 9.70048 0.0814369 9.84995C0.241214 10.0682 4.03853 15.1874 8.29996 15.1874C12.5614 15.1874 16.3587 10.0682 16.5185 9.84995C16.6188 9.71247 16.6278 9.51342 16.5385 9.36474ZM8.29996 14.3881C4.88378 14.3881 1.63564 10.623 0.810487 9.59177C1.63427 8.55979 4.87895 4.7955 8.29996 4.7955C12.2972 4.7955 15.1185 8.55499 15.8074 9.57019C15.012 10.5686 11.7452 14.3881 8.29996 14.3881Z" fill="#2B60FA"/><path d="M8.29795 6.39478C6.77212 6.39478 5.53125 7.82886 5.53125 9.59229C5.53125 11.3557 6.77212 12.7898 8.29795 12.7898C9.82378 12.7898 11.0646 11.3557 11.0646 9.59229C11.0646 7.82886 9.82378 6.39478 8.29795 6.39478ZM8.29795 11.9905C7.15392 11.9905 6.22292 10.9145 6.22292 9.59232C6.22292 8.27016 7.15392 7.19418 8.29795 7.19418C9.44197 7.19418 10.373 8.27016 10.373 9.59232C10.373 10.9145 9.44197 11.9905 8.29795 11.9905Z" fill="#2B60FA"/></g><defs><clipPath id="clip0_709_4513"><rect width="16.6" height="19.1848" fill="white"/></clipPath></defs></svg>
+                        <span>12 views</span>                     
+                    </div>
+                    <div class="comments">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M2.67014 0H13.9542C15.1347 0 16.0938 1.10833 16.0938 2.47265V10.4532C16.0938 11.8147 15.1372 12.9202 13.9616 12.9258V16.5462L9.45862 12.9258H2.67014C1.48965 12.9258 0.530643 11.8175 0.530643 10.4532V2.47265C0.530643 1.10833 1.49208 0 2.67014 0ZM1.4434 10.4532C1.4434 11.2352 1.99349 11.871 2.67014 11.871H9.74583L13.0512 14.5293V11.871H13.9567C14.6333 11.871 15.1834 11.2352 15.1834 10.4532V2.47265C15.1834 1.69063 14.6333 1.05488 13.9567 1.05488H2.67258C1.99592 1.05488 1.44583 1.69063 1.44583 2.47265V10.4532H1.4434Z" fill="#2B60FA"/></svg>
+                        <span>12 comments</span>                     
+                    </div>
+                </div>
+            </li> 
+        </ul>
+    </div>
+</section>

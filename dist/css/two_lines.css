@@ -1,0 +1,125 @@
+.two_lines {
+  padding: 50px 0;
+}
+.two_lines h2 {
+  font-size: 36px;
+  line-height: 41px;
+  margin-bottom: 40px;
+  color: #1b1b1d;
+}
+.two_lines ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.two_lines_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.two_lines_left {
+  width: 26%;
+  margin-right: 1%;
+}
+.two_lines_right {
+  display: flex;
+  width: 73%;
+}
+.two_lines .wrapper_for_line {
+  position: relative;
+  max-width: 393px;
+  width: 31%;
+  margin-right: 1%;
+}
+.two_lines .wrapper_for_line:first-child {
+  width: 26%;
+  margin-right: 3%;
+  min-width: 270px;
+}
+.two_lines .wrapper_for_line:last-child {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.two_lines .wrapper_for_line .line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: -20px;
+  background-color: #c4c4c7;
+}
+.two_lines .wrapper_for_line .blue_line {
+  z-index: 2;
+  background-color: #2B60FA;
+  height: 50%;
+}
+.two_lines .wrapper_for_line .gray_line {
+  z-index: 1;
+}
+.two_lines .wrapper_for_line ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.two_lines .wrapper_for_line ul li {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.two_lines .wrapper_for_line ul li h3 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+.two_lines .wrapper_for_line ul li:first-child::before {
+  top: 0;
+}
+.two_lines .wrapper_for_line ul li:last-child {
+  margin-bottom: 0;
+}
+.two_lines .wrapper_for_line ul li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -22px;
+  height: 6px;
+  width: 6px;
+  background-color: #c4c4c7;
+}
+
+@media screen and (max-width: 900px) {
+  .two_lines_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .two_lines .wrapper_for_line {
+    width: 100%;
+    margin: 0;
+    margin: 20px 0;
+    max-width: 550px;
+    padding-left: 20px;
+  }
+  .two_lines .wrapper_for_line img {
+    width: 100%;
+  }
+  .two_lines .wrapper_for_line .line {
+    left: 0;
+  }
+  .two_lines .wrapper_for_line:first-child {
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .two_lines {
+    padding: 25px 0;
+  }
+  .two_lines h2 {
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+}

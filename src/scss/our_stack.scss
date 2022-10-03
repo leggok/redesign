@@ -1,0 +1,88 @@
+.our_stack{
+    padding: 40px 0;
+    background-color: #1B1B1D;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    h2{
+        color: #fff;
+        font-size: 36px;
+        line-height: 41px;
+        letter-spacing: -0.5px;
+        margin-bottom: 30px;
+    }
+    .subtitle{
+        color: #dfdfdf;
+        font-size: 16px;
+        line-height: 25px;
+        max-width: 860px;
+        margin-bottom: 42px;
+    }
+    .team{
+        &s_list{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            & > li{
+                width: 32%;
+                margin: 0 1% 1% 0;
+                min-width: 245px;
+            }
+            h3{
+                color: #fff;
+                font-size: 18px;
+                line-height: 20px;
+                margin-bottom: 22px;
+            }
+            
+        }
+        &_stack{
+            display: flex;
+            flex-wrap: wrap;
+            background: #1B1B1D;
+            box-shadow: -4.08333px -4.08333px 13px rgba(0, 0, 0, 0.2), 6.125px 6.125px 12.25px rgba(0, 0, 0, 0.3);
+            li{
+                color: #fff;
+                font-size: 16px;
+                line-height: 25px;
+                padding: 8px 10px;
+                border: 1px solid #afafaf;
+                margin-bottom: 14px;
+                margin-right: 19px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .our_stack .teams_list > li{
+        width: 48%;
+    }
+}
+@media screen and (max-width: 555px) {
+    .our_stack .teams_list > li{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .our_stack{
+        padding: 25px 0;
+        h2{
+            font-size: 24px;
+            line-height: 27px;
+            margin-bottom: 15px;
+        }
+        .subtitle{
+            margin-bottom: 20px;
+        }
+        .team_stack li{
+            font-size: 14px;
+            line-height: 22px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

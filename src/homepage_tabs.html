@@ -1,0 +1,486 @@
+<style>
+    .homepage_tabs {
+  padding: 45px 0;
+}
+.homepage_tabs ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.homepage_tabs h2 {
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.homepage_tabs .subtitle {
+  max-width: 690px;
+  color: #525252;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 42px;
+}
+.homepage_tabs .tabs_component {
+  display: flex;
+  box-shadow: 6px 6px 20px rgba(174, 174, 192, 0.25);
+  max-width: 1300px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.homepage_tabs .tabs_component_left {
+  background-color: #f3f3f3;
+  width: 30%;
+  position: relative;
+  z-index: 2;
+}
+.homepage_tabs .tabs_component_left li {
+  color: #525252;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 15px 20px;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.homepage_tabs .tabs_component_left li:hover {
+  background-color: #c7c7c7;
+}
+.homepage_tabs .tabs_component_left li.active {
+  font-size: 24px;
+  color: #1b1b1d;
+  padding: 25px 20px;
+  padding-right: 30px;
+  background-color: #c7c7c7;
+  position: relative;
+}
+.homepage_tabs .tabs_component_left li.active::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 25px;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M8.33333 16L14.8148 8.5L8.33333 0.999999M15 8.5L-3.27835e-07 8.5' stroke='%232B60FA' stroke-width='2'/%3E%3C/svg%3E");
+}
+.homepage_tabs .tabs_component_right {
+  width: 70%;
+}
+.homepage_tabs .tabs_component_right .tab_item {
+  padding: 64px 50px 50px 70px;
+  position: absolute;
+  transition: all 0.5s ease;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  width: 25%;
+}
+.homepage_tabs .tabs_component_right .tab_item.show {
+  opacity: 1;
+  left: 30%;
+  width: 70%;
+}
+.homepage_tabs .tabs_component_right h3 {
+  font-size: 20px;
+  line-height: 30px;
+  color: #1b1b1d;
+  margin-bottom: 34px;
+}
+.homepage_tabs .tabs_component_right p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #525252;
+  margin-bottom: 24px;
+}
+.homepage_tabs .tabs_component_right .tabs_services_list {
+  padding-left: 70px;
+  margin-bottom: 33px;
+}
+.homepage_tabs .tabs_component_right .tabs_services_list h4 {
+  font-size: 16px;
+  line-height: 25px;
+  color: #1b1b1d;
+  margin-bottom: 24px;
+}
+.homepage_tabs .tabs_component_right .tabs_services_list ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 455px;
+  justify-content: space-between;
+}
+.homepage_tabs .tabs_component_right .tabs_services_list ul li {
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 16px;
+  width: 48%;
+  position: relative;
+}
+.homepage_tabs .tabs_component_right .tabs_services_list ul li::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -10px;
+  width: 5px;
+  height: 5px;
+  background-color: #2b60fa;
+}
+.homepage_tabs .tabs_component_right .tabs_services_list ul li:hover a {
+  color: #2B60FA;
+}
+.homepage_tabs .tabs_component_right .tabs_services_list ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 0;
+  color: #1b1b1d;
+}
+.homepage_tabs .tabs_component_right .btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.homepage_tabs .tabs_component_right .btn a {
+  background-color: #2b60fa;
+  border: 2px solid transparent;
+  color: #fff;
+  padding: 10px 26px;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+.homepage_tabs .tabs_component_right .btn a:hover {
+  color: #2b60fa;
+  border-color: #2b60fa;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+  .homepage_tabs .tabs_component_left li {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .homepage_tabs .tabs_component_left li.active {
+    font-size: 21px;
+    padding: 20px 15px;
+  }
+  .homepage_tabs .tabs_component_right .tab_item {
+    padding: 50px;
+  }
+  .homepage_tabs .tabs_component_right h3 {
+    margin-bottom: 24px;
+  }
+  .homepage_tabs .tabs_component_right p {
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .homepage_tabs .tabs_component_left {
+    min-width: 290px;
+  }
+  .homepage_tabs .tabs_component_right .tabs_services_list {
+    padding-left: 10px;
+  }
+  .homepage_tabs .tabs_component_right .tabs_services_list ul {
+    max-width: initial;
+  }
+  .homepage_tabs .tabs_component_right .tabs_services_list ul li {
+    margin-right: 1%;
+  }
+}
+@media screen and (max-width: 890px) {
+  .homepage_tabs .tabs_component_right .tab_item.show {
+    left: 34%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .homepage_tabs .tabs_component_right .tab_item {
+    padding: 40px;
+  }
+  .homepage_tabs .tabs_component_right .tabs_services_list {
+    padding-left: 0;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 830px) {
+  .homepage_tabs .tabs_component_left {
+    display: none;
+  }
+  .homepage_tabs .tabs_component_right {
+    width: 100%;
+  }
+  .homepage_tabs .tabs_component_right .tabs_services_list ul li a {
+    text-decoration: underline;
+  }
+  .homepage_tabs .tabs_component_right .btn {
+    justify-content: center;
+  }
+  .homepage_tabs .tabs_component_right .tab_item {
+    position: static;
+    width: 100%;
+    display: none;
+  }
+  .homepage_tabs .tabs_component_right .tab_item.show {
+    width: 100%;
+    display: block;
+  }
+}
+@media screen and (max-width: 570px) {
+  .homepage_tabs .tabs_component_right .tabs_services_list ul li {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .homepage_tabs {
+    padding: 25px 0;
+  }
+  .homepage_tabs h2 {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 17px;
+  }
+  .homepage_tabs .subtitle {
+    margin-bottom: 24px;
+  }
+  .homepage_tabs .tabs_component_right h3 {
+    text-align: center;
+  }
+  .homepage_tabs .tabs_component_right p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .homepage_tabs .tabs_component_right .tabs_services_list h4 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .homepage_tabs .tabs_component_right .tabs_services_list ul li {
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .homepage_tabs .tabs_component_right .btn a {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .homepage_tabs .tabs_component_right .tab_item {
+    padding: 20px;
+  }
+}
+</style>
+<section class="homepage_tabs">
+    <div class="container">
+        <h2>IT services our Software Development Company offers</h2>
+        <div class="subtitle">
+            <p>As a successful software engineering company, Atlasiko Inc. has extensive expertise and valuable experience in delivering various IT services.</p>
+        </div>
+          <div class="tabs_component">
+            <div class="tabs_component_left">
+                <ul>
+                    <li class="active">Software development</li>
+                    <li>It consulting</li>
+                    <li>Web Development Services</li>
+                    <li>Web Design Service</li>
+                    <li>Web Apps Development Service</li>
+                    <li>Mobile App Development Service</li>
+                    <li>Augmented Reality Services</li>
+                    <li>Ecommerce Services</li>
+                    <li>IT Outsourcing Services</li>
+                </ul>
+            </div>
+            <div class="tabs_component_right">
+                <div class="tab_item show">
+                    <h3>Software development</h3>
+                    <p>Our software developer firm has wide-ranging expertise in delivering top-rate software solutions compliant with any operation system, network platform, or device. Professionals of IT development in Atlasiko Inc. use the latest software development technologies to gain maximum efficiency and advantageous features for your program. </p>
+                    <div class="tabs_services_list">
+                        <h4>What our Software Development Agency provides</h4>
+                        <ul>
+                            <li><a href="#">Software Product Development</a></li>
+                            <li><a href="#">Application Development</a></li>
+                            <li><a href="#">Managed Services</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Professional Consulting</a></li>
+                            <li><a href="#">Support and Maintenance</a></li>
+                            <li><a href="#">Training for Users</a></li>
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="tab_item">
+                    <h3>It consulting</h3>
+                    <p>Our software developer firm has wide-ranging expertise in delivering top-rate software solutions compliant with any operation system, network platform, or device. Professionals of IT development in Atlasiko Inc. use the latest software development technologies to gain maximum efficiency and advantageous features for your program. </p>
+                    <div class="tabs_services_list">
+                        <h4>What our Software Development Agency provides</h4>
+                        <ul>
+                            <li><a href="#">Software Product Development</a></li>
+                            <li><a href="#">Application Development</a></li>
+                            <li><a href="#">Managed Services</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Professional Consulting</a></li>
+                            <li><a href="#">Support and Maintenance</a></li>
+                            <li><a href="#">Training for Users</a></li>
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="tab_item">
+                    <h3>Web Development Services</h3>
+                    <p>Our software developer firm has wide-ranging expertise in delivering top-rate software solutions compliant with any operation system, network platform, or device. Professionals of IT development in Atlasiko Inc. use the latest software development technologies to gain maximum efficiency and advantageous features for your program. </p>
+                    <div class="tabs_services_list">
+                        <h4>What our Software Development Agency provides</h4>
+                        <ul>
+                            <li><a href="#">Software Product Development</a></li>
+                            <li><a href="#">Application Development</a></li>
+                            <li><a href="#">Managed Services</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Professional Consulting</a></li>
+                            <li><a href="#">Support and Maintenance</a></li>
+                            <li><a href="#">Training for Users</a></li>
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="tab_item">
+                    <h3>Web Design Service</h3>
+                    <p>Our software developer firm has wide-ranging expertise in delivering top-rate software solutions compliant with any operation system, network platform, or device. Professionals of IT development in Atlasiko Inc. use the latest software development technologies to gain maximum efficiency and advantageous features for your program. </p>
+                    <div class="tabs_services_list">
+                        <h4>What our Software Development Agency provides</h4>
+                        <ul>
+                            <li><a href="#">Software Product Development</a></li>
+                            <li><a href="#">Application Development</a></li>
+                            <li><a href="#">Managed Services</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Professional Consulting</a></li>
+                            <li><a href="#">Support and Maintenance</a></li>
+                            <li><a href="#">Training for Users</a></li>
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="tab_item">
+                    <h3>Web Apps Development Service</h3>
+                    <p>Our software developer firm has wide-ranging expertise in delivering top-rate software solutions compliant with any operation system, network platform, or device. Professionals of IT development in Atlasiko Inc. use the latest software development technologies to gain maximum efficiency and advantageous features for your program. </p>
+                    <div class="tabs_services_list">
+                        <h4>What our Software Development Agency provides</h4>
+                        <ul>
+                            <li><a href="#">Software Product Development</a></li>
+                            <li><a href="#">Application Development</a></li>
+                            <li><a href="#">Managed Services</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Professional Consulting</a></li>
+                            <li><a href="#">Support and Maintenance</a></li>
+                            <li><a href="#">Training for Users</a></li>
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="tab_item">
+                    <h3>Mobile App Development Service</h3>
+                    <p>Our software developer firm has wide-ranging expertise in delivering top-rate software solutions compliant with any operation system, network platform, or device. Professionals of IT development in Atlasiko Inc. use the latest software development technologies to gain maximum efficiency and advantageous features for your program. </p>
+                    <div class="tabs_services_list">
+                        <h4>What our Software Development Agency provides</h4>
+                        <ul>
+                            <li><a href="#">Software Product Development</a></li>
+                            <li><a href="#">Application Development</a></li>
+                            <li><a href="#">Managed Services</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Professional Consulting</a></li>
+                            <li><a href="#">Support and Maintenance</a></li>
+                            <li><a href="#">Training for Users</a></li>
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="tab_item">
+                    <h3>Augmented Reality Services</h3>
+                    <p>Our software developer firm has wide-ranging expertise in delivering top-rate software solutions compliant with any operation system, network platform, or device. Professionals of IT development in Atlasiko Inc. use the latest software development technologies to gain maximum efficiency and advantageous features for your program. </p>
+                    <div class="tabs_services_list">
+                        <h4>What our Software Development Agency provides</h4>
+                        <ul>
+                            <li><a href="#">Software Product Development</a></li>
+                            <li><a href="#">Application Development</a></li>
+                            <li><a href="#">Managed Services</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Professional Consulting</a></li>
+                            <li><a href="#">Support and Maintenance</a></li>
+                            <li><a href="#">Training for Users</a></li>
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="tab_item">
+                    <h3>Ecommerce Services</h3>
+                    <p>Our software developer firm has wide-ranging expertise in delivering top-rate software solutions compliant with any operation system, network platform, or device. Professionals of IT development in Atlasiko Inc. use the latest software development technologies to gain maximum efficiency and advantageous features for your program. </p>
+                    <div class="tabs_services_list">
+                        <h4>What our Software Development Agency provides</h4>
+                        <ul>
+                            <li><a href="#">Software Product Development</a></li>
+                            <li><a href="#">Application Development</a></li>
+                            <li><a href="#">Managed Services</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Professional Consulting</a></li>
+                            <li><a href="#">Support and Maintenance</a></li>
+                            <li><a href="#">Training for Users</a></li>
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="tab_item">
+                    <h3>IT Outsourcing Services</h3>
+                    <p>Our software developer firm has wide-ranging expertise in delivering top-rate software solutions compliant with any operation system, network platform, or device. Professionals of IT development in Atlasiko Inc. use the latest software development technologies to gain maximum efficiency and advantageous features for your program. </p>
+                    <div class="tabs_services_list">
+                        <h4>What our Software Development Agency provides</h4>
+                        <ul>
+                            <li><a href="#">Software Product Development</a></li>
+                            <li><a href="#">Application Development</a></li>
+                            <li><a href="#">Managed Services</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Professional Consulting</a></li>
+                            <li><a href="#">Support and Maintenance</a></li>
+                            <li><a href="#">Training for Users</a></li>
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

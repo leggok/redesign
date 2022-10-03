@@ -1,0 +1,102 @@
+.questions{
+    padding: 50px 0;
+    background-color: #F4F5FB;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_center{
+        width: 45%;
+        max-width: 640px;
+        height: 540px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &_left, &_right{
+        width: 25%;
+        min-width: 280px;
+    }
+    &_left{
+        .like_heading{
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: -0.5px;
+            color: #525252;
+            margin-bottom: 40px;
+        }
+        .num_list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            &_item{
+                max-width: 140px;
+                width: 100%;
+                padding-bottom: 30px;
+                border-bottom: 2px solid #c7c6c6;
+                margin-bottom: 25px;
+                &_num{
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 33px;
+                    letter-spacing: -0.5px;
+                    color: #2b61fa;
+                    margin-bottom: 6px;
+                }
+                &_text{
+                    color: #525252;
+                    font-size: 12px;
+                    font-weight: 18;
+                }
+            }
+        }
+        .logos{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+    &_right{
+        blockquote{
+            font-size: 16px;
+            line-height: 25px;
+            color: #525252;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .author{
+            display: flex;
+            align-items: center;
+            &_image{
+                width: 57px;
+                height: 57px;
+                margin-right: 30px;
+            }
+            &_name{
+                color: #1b1b1d;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .questions_center{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .questions .container{
+        flex-direction: column;
+        & > div{
+            width: 100%;
+            max-width: initial;
+            margin: 7px 0;
+        }
+    }
+}

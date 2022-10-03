@@ -1,0 +1,89 @@
+.benefits {
+  padding: 50px 0;
+}
+.benefits h2 {
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.5px;
+  color: #1B1B1D;
+  margin-bottom: 42px;
+}
+.benefits ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.benefits ul li {
+  width: 31%;
+  margin: 1%;
+  padding: 15px 20px;
+  min-width: 250px;
+  transition: all 0.2s ease;
+}
+.benefits ul li h3 {
+  font-size: 20px;
+  line-height: 23px;
+  color: #1b1b1d;
+  margin-bottom: 25px;
+  position: relative;
+}
+.benefits ul li h3::after {
+  position: absolute;
+  transition: all 0.2s ease;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  height: 1px;
+  width: 90px;
+  background-color: #c7c6c6;
+}
+.benefits ul li p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #525252;
+}
+.benefits ul li:hover {
+  transition: all 0.2s ease;
+  background-color: #fff;
+  box-shadow: 6px 6px 20px rgba(174, 174, 192, 0.3);
+}
+.benefits ul li:hover h3::after {
+  background-color: #2b61fa;
+}
+
+@media screen and (max-width: 950px) {
+  .benefits ul li {
+    min-width: initial;
+    width: 48%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .benefits ul li {
+    display: none;
+    width: 100%;
+    box-shadow: 6px 6px 20px rgba(174, 174, 192, 0.3);
+    height: initial;
+  }
+  .benefits ul li:first-child {
+    display: block;
+  }
+  .benefits ul li h3 {
+    text-align: center;
+  }
+  .benefits ul li h3::after {
+    left: calc(50% - 45px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .benefits {
+    padding: 25px 0;
+  }
+  .benefits h2 {
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 12px;
+  }
+}

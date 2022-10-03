@@ -1,0 +1,70 @@
+.improve {
+  padding: 48px 0;
+}
+.improve h2 {
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+}
+.improve ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.improve ul li {
+  padding: 19px 16px;
+  border: 1px solid #afafaf;
+  width: 23%;
+  margin: 1%;
+  transition: all 0.2s ease;
+  min-width: 220px;
+}
+.improve ul li h3 {
+  font-size: 20px;
+  line-height: 23px;
+  color: #1b1b1d;
+  margin-bottom: 22px;
+}
+.improve ul li p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #525252;
+}
+.improve ul li:hover {
+  border-color: #2b61fa;
+}
+.improve ul li:hover h3 {
+  color: #2b61fa;
+}
+
+@media screen and (max-width: 997px) {
+  .improve ul li {
+    width: 31%;
+  }
+}
+@media screen and (max-width: 743px) {
+  .improve ul li {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .improve {
+    padding: 25px 0;
+  }
+  .improve h2 {
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 12px;
+  }
+  .improve ul li {
+    margin: 0;
+    width: 100%;
+    display: none;
+  }
+  .improve ul li:first-child {
+    display: block;
+  }
+}
